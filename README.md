@@ -91,3 +91,11 @@ Git의 init은 저장소 생성, add는 변경 선택, commit은 이력 기록, 
 필수 기능을 대상으로 구현했다. 랜덤·힌트·삭제·히스토리 등 선택 보너스는 포함하지 않는다. 저장소 링크가 제출물이며 네이토 사전평가는 자동 실행하지 않는다.
 
 복제·동기화 실습: 별도 clone 작업 폴더에서 이 문장을 추가하고 원본에서 pull로 반영했다.
+
+## 실제 출력 화면 캡처
+
+실제 subprocess stdout 발췌와 Git 명령 출력을 VS Code에서 열어 캡처했다. 원문과 입력 순서는 CLI 증거 파일에 있다.
+
+![추가·목록·플레이·점수·재시작](docs/screenshots/execution.png)
+![환경과 Python·Git 설정](docs/screenshots/environment-clean.png)
+![실제 Git 그래프](docs/screenshots/git-graph.png)
