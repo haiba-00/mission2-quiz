@@ -5,9 +5,10 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import uuid
 
 root = Path(__file__).resolve().parent
-demo = root / 'work' / 'demo'
+demo = root / 'work' / ('demo-' + uuid.uuid4().hex)
 demo.mkdir(parents=True, exist_ok=True)
 for name in ['main.py', 'game.py', 'quiz.py', 'defaults.py', 'inputs.py', 'storage.py']:
     shutil.copyfile(root / name, demo / name)
@@ -37,7 +38,7 @@ out = run('EOF 안전 종료', '')
 assert '안전하게 종료' in out
 state.write_text('{broken', encoding='utf-8')
 out = run('손상된 JSON 복구', '3\n5\n')
-assert '기본 데이터로 복구' in out
-assert len(json.loads(state.read_text(encoding='utf-8'))['quizzes']) == 5
+assert '정상 .bak 데이터로 자동 복구' in out
+assert len(json.loads(state.read_text(encoding='utf-8'))['quizzes']) == 6
 (root / 'docs' / 'cli-evidence.md').write_text('# 실제 CLI 실행 증거\n\n분리된 work/demo 복사본을 실행했다. 루트 state.json 경로 규칙도 동일하다.\n\n' + '\n'.join(sections), encoding='utf-8')
 print('PASS: 7 actual CLI scenarios; all exit codes 0; persistence assertions passed.')

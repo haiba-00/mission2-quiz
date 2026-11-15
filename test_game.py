@@ -85,6 +85,34 @@ class GameTests(unittest.TestCase):
                 main.main()
             self.assertTrue(self.path.exists())
 
+    def test_backup_recovery_preserves_corrupt_original(self):
+        game = QuizGame(self.path)
+        game.best_score = 80
+        self.assertTrue(game.save())
+        game.best_score = 100
+        self.assertTrue(game.save())
+        self.path.write_text('{broken', encoding='utf-8')
+        restored = QuizGame(self.path)
+        self.assertEqual(restored.best_score, 80)
+        originals = list(self.path.parent.glob('state.json.corrupt-*'))
+        self.assertEqual(len(originals), 1)
+        self.assertEqual(originals[0].read_text(encoding='utf-8'), '{broken')
+        self.assertTrue(restored.save())
+        self.assertEqual(QuizGame(self.path).best_score, 80)
+
+    def test_missing_primary_recovers_backup(self):
+        game = QuizGame(self.path)
+        game.best_score = 60
+        game.save()
+        game.save()
+        self.path.unlink()
+        self.assertEqual(QuizGame(self.path).best_score, 60)
+
+    def test_invalid_backup_falls_back_to_defaults(self):
+        self.path.write_text('{broken', encoding='utf-8')
+        self.path.with_name('state.json.bak').write_text('[]', encoding='utf-8')
+        self.assertEqual(len(QuizGame(self.path).quizzes), 5)
+
     def test_menu_dispatch(self):
         game = QuizGame(self.path)
         with patch('builtins.input', side_effect=['3', '4', '5']), patch.object(game, 'list_quizzes') as listing, patch.object(game, 'show_score') as score:
