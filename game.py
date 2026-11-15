@@ -63,3 +63,12 @@ class QuizGame:
         else:
             print('퀴즈는 추가됐지만 파일 저장은 실패했습니다.')
 
+
+    def list_quizzes(self):
+        if not self.quizzes:
+            print('등록된 퀴즈가 없습니다.')
+            return
+        print(f'등록 퀴즈: {len(self.quizzes)}개')
+        for number, quiz in enumerate(self.quizzes, 1):
+            print(f'[{number}] {quiz.question}')
+
