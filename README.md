@@ -74,6 +74,8 @@ python -X utf8 capture_demo.py
 
 ## Python과 Git 설명
 
+커밋은 한 가지 목적을 독립적으로 검토·되돌릴 수 있는 기능 또는 수정 단위로 나눈다. 메시지는 `접두사: 변경 내용 요약` 형식을 사용한다. `Feat:`, `Fix:`, `Refactor:`, `Test:`, `Docs:`, `Chore:`, `Merge:`의 사용 기준과 실제 커밋 예시, 커밋 전 확인 절차는 [커밋 단위 및 메시지 규칙](docs/git-workflow.md)에 명시했다.
+
 변수는 값을 이름으로 참조한다. int는 정수, str은 문자열, bool은 참/거짓, list는 순서 있는 목록, dict는 키/값 구조다. 메뉴는 if/elif, 전체 메뉴 반복은 while, 문제와 선택지 순회는 for를 사용한다. read_number의 매개변수는 범위와 안내 문구이고 반환값은 검증한 정수다.
 
 Quiz는 개별 문제, QuizGame은 게임 흐름, StateStore는 저장을 담당한다. 클래스는 속성과 동작을 묶는 설계이며 객체는 그 인스턴스다. Quiz의 dataclass가 생성하는 __init__는 문제 속성을 초기화하고 __post_init__가 검증한다. self는 해당 객체다. QuizGame.__init__는 기본값과 저장 데이터를 준비한다.
