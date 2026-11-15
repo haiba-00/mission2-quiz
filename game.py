@@ -26,8 +26,12 @@ class QuizGame:
                 return
             if choice == 1:
                 self.play()
-            else:
-                print('선택한 기능을 준비하고 있습니다.')
+            elif choice == 2:
+                self.add_quiz()
+            elif choice == 3:
+                self.list_quizzes()
+            elif choice == 4:
+                self.show_score()
 
     def play(self):
         if not self.quizzes:

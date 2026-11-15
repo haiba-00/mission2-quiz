@@ -1,0 +1,212 @@
+test_add_and_restart (test_game.GameTests.test_add_and_restart) ... ok
+test_empty_collection (test_game.GameTests.test_empty_collection) ... ok
+test_eof_and_ctrl_c_save (test_game.GameTests.test_eof_and_ctrl_c_save) ... ok
+test_menu_dispatch (test_game.GameTests.test_menu_dispatch) ... ok
+test_missing_corrupt_and_invalid_schema (test_game.GameTests.test_missing_corrupt_and_invalid_schema) ... ok
+test_no_game_vs_zero_score (test_game.GameTests.test_no_game_vs_zero_score) ... ok
+test_numeric_validation (test_game.GameTests.test_numeric_validation) ... ok
+test_play_best_persists_and_does_not_decrease (test_game.GameTests.test_play_best_persists_and_does_not_decrease) ... ok
+test_quiz_schema (test_game.GameTests.test_quiz_schema) ... ok
+test_write_failure_preserves_old_state (test_game.GameTests.test_write_failure_preserves_old_state) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.150s
+
+OK
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+새 퀴즈 등록
+빈 내용은 등록할 수 없습니다.
+숫자를 입력하세요. 빈 입력은 사용할 수 없습니다.
+퀴즈를 추가하고 저장했습니다.
+저장 데이터 로드: 퀴즈 6개, 최고점수 None
+저장 데이터 로드: 퀴즈 0개, 최고점수 None
+퀴즈가 없습니다. 먼저 퀴즈를 추가하세요.
+등록된 퀴즈가 없습니다.
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+
+작업실 퀴즈
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+
+입력이 중단되어 안전하게 종료합니다.
+현재 데이터를 저장했습니다.
+저장 데이터 로드: 퀴즈 5개, 최고점수 None
+
+작업실 퀴즈
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+
+입력이 중단되어 안전하게 종료합니다.
+현재 데이터를 저장했습니다.
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+
+작업실 퀴즈
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+
+작업실 퀴즈
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+
+작업실 퀴즈
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+종료합니다.
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+저장 파일을 읽을 수 없어 기본 데이터로 복구합니다: JSONDecodeError
+저장 파일을 읽을 수 없어 기본 데이터로 복구합니다: ValueError
+저장 파일을 읽을 수 없어 기본 데이터로 복구합니다: KeyError
+저장 파일을 읽을 수 없어 기본 데이터로 복구합니다: ValueError
+저장 파일을 읽을 수 없어 기본 데이터로 복구합니다: UnicodeDecodeError
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+
+[문제 1/5]
+Python에서 정수를 나타내는 자료형은?
+  1. str
+  2. int
+  3. list
+  4. dict
+오답입니다. 정답: 2
+
+[문제 2/5]
+Git에서 현재 변경을 이력으로 기록하는 명령은?
+  1. commit
+  2. clone
+  3. pull
+  4. status
+오답입니다. 정답: 1
+
+[문제 3/5]
+Docker에서 호스트 포트와 컨테이너 포트를 연결하는 옵션은?
+  1. --name
+  2. -v
+  3. -p
+  4. --rm
+오답입니다. 정답: 3
+
+[문제 4/5]
+JSON에서 키와 값으로 구성된 객체에 대응하는 Python 자료형은?
+  1. bool
+  2. str
+  3. list
+  4. dict
+정답입니다!
+
+[문제 5/5]
+파일을 UTF-8로 읽을 때 open에 지정하는 인자는?
+  1. encoding
+  2. answer
+  3. branch
+  4. port
+오답입니다. 정답: 1
+결과: 5문제 중 1문제 정답 (20점)
+새로운 최고 점수입니다!
+저장 데이터 로드: 퀴즈 5개, 최고점수 0
+숫자를 입력하세요. 빈 입력은 사용할 수 없습니다.
+숫자를 입력하세요. 빈 입력은 사용할 수 없습니다.
+1~4 사이의 숫자를 입력하세요.
+1~4 사이의 숫자를 입력하세요.
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+
+[문제 1/5]
+Python에서 정수를 나타내는 자료형은?
+  1. str
+  2. int
+  3. list
+  4. dict
+정답입니다!
+
+[문제 2/5]
+Git에서 현재 변경을 이력으로 기록하는 명령은?
+  1. commit
+  2. clone
+  3. pull
+  4. status
+정답입니다!
+
+[문제 3/5]
+Docker에서 호스트 포트와 컨테이너 포트를 연결하는 옵션은?
+  1. --name
+  2. -v
+  3. -p
+  4. --rm
+정답입니다!
+
+[문제 4/5]
+JSON에서 키와 값으로 구성된 객체에 대응하는 Python 자료형은?
+  1. bool
+  2. str
+  3. list
+  4. dict
+정답입니다!
+
+[문제 5/5]
+파일을 UTF-8로 읽을 때 open에 지정하는 인자는?
+  1. encoding
+  2. answer
+  3. branch
+  4. port
+정답입니다!
+결과: 5문제 중 5문제 정답 (100점)
+새로운 최고 점수입니다!
+저장 데이터 로드: 퀴즈 5개, 최고점수 100
+
+[문제 1/5]
+Python에서 정수를 나타내는 자료형은?
+  1. str
+  2. int
+  3. list
+  4. dict
+정답입니다!
+
+[문제 2/5]
+Git에서 현재 변경을 이력으로 기록하는 명령은?
+  1. commit
+  2. clone
+  3. pull
+  4. status
+오답입니다. 정답: 1
+
+[문제 3/5]
+Docker에서 호스트 포트와 컨테이너 포트를 연결하는 옵션은?
+  1. --name
+  2. -v
+  3. -p
+  4. --rm
+오답입니다. 정답: 3
+
+[문제 4/5]
+JSON에서 키와 값으로 구성된 객체에 대응하는 Python 자료형은?
+  1. bool
+  2. str
+  3. list
+  4. dict
+오답입니다. 정답: 4
+
+[문제 5/5]
+파일을 UTF-8로 읽을 때 open에 지정하는 인자는?
+  1. encoding
+  2. answer
+  3. branch
+  4. port
+오답입니다. 정답: 1
+결과: 5문제 중 1문제 정답 (20점)
+저장 데이터 로드: 퀴즈 5개, 최고점수 100
+저장 파일이 없어 기본 퀴즈를 사용합니다.
+저장하지 못했습니다. 메모리의 데이터는 유지됩니다: PermissionError
+
