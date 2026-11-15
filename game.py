@@ -1,11 +1,18 @@
 from defaults import default_quizzes
-from inputs import read_number
+from inputs import read_number, read_text
+from storage import StateStore
+from quiz import Quiz
 
 
 class QuizGame:
-    def __init__(self):
+    def __init__(self, state_path=None):
         self.quizzes = default_quizzes()
         self.best_score = None
+        self.store = StateStore(state_path)
+        loaded = self.store.load()
+        if loaded is not None:
+            self.quizzes, self.best_score = loaded
+            print(f'저장 데이터 로드: 퀴즈 {len(self.quizzes)}개, 최고점수 {self.best_score}')
 
     def show_menu(self):
         print('\n작업실 퀴즈\n1. 퀴즈 풀기\n2. 퀴즈 추가\n3. 퀴즈 목록\n4. 점수 확인\n5. 종료')
@@ -39,4 +46,8 @@ class QuizGame:
         score = round(correct / len(self.quizzes) * 100)
         print(f'결과: {len(self.quizzes)}문제 중 {correct}문제 정답 ({score}점)')
         return score
+
+
+    def save(self):
+        return self.store.save(self.quizzes, self.best_score)
 
