@@ -51,3 +51,15 @@ class QuizGame:
     def save(self):
         return self.store.save(self.quizzes, self.best_score)
 
+
+    def add_quiz(self):
+        print('새 퀴즈 등록')
+        question = read_text('문제: ')
+        choices = [read_text(f'선택지 {number}: ') for number in range(1, 5)]
+        answer = read_number('정답 번호: ', 1, 4)
+        self.quizzes.append(Quiz(question, choices, answer))
+        if self.save():
+            print('퀴즈를 추가하고 저장했습니다.')
+        else:
+            print('퀴즈는 추가됐지만 파일 저장은 실패했습니다.')
+
